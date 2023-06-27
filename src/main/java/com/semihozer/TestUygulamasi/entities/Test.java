@@ -17,6 +17,7 @@ public class Test {
     private String id;
     private String name;
     private String description;
+    private int level;
     @Future
     private Date deadline;
     private Date timestamp;
@@ -91,7 +92,15 @@ public class Test {
         this.answers = answers;
     }
 
-    public Test(String id, String name, String description, Date deadline, List<Question> questions, List<Student> students_solved, List<Integer> answers) {
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public Test(String id, String name, String description, Date deadline, List<Question> questions, List<Student> students_solved, List<Integer> answers, Integer level) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -100,5 +109,6 @@ public class Test {
         this.questions = questions;
         this.students_solved = students_solved;
         this.answers = answers;
+        this.level = level;
     }
 }

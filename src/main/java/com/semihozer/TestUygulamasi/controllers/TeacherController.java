@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TeacherController {
 
     //Services to use
-    TeacherService teacherService;
 
-    public TeacherController(TeacherService teacherService) {
-        this.teacherService = teacherService;
-    }
+
 }
