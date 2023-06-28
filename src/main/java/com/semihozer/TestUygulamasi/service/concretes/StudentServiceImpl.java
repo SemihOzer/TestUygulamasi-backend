@@ -3,7 +3,7 @@ package com.semihozer.TestUygulamasi.service.concretes;
 import com.semihozer.TestUygulamasi.entities.Student;
 import com.semihozer.TestUygulamasi.repositories.StudentRepository;
 import com.semihozer.TestUygulamasi.service.abstracts.StudentService;
-import com.semihozer.TestUygulamasi.utilites.exceptions.StudentNotFoundException;
+import com.semihozer.TestUygulamasi.utilites.exceptions.NotFoundException;
 
 import java.util.Optional;
 
@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService {
         Optional<Student> student = studentRepository.findById(id);
 
         if(student.isEmpty()){
-            throw new StudentNotFoundException("Student Id: "+id+" not found!");
+            throw new NotFoundException("Student Id: "+id+" not found!");
         }
 
         return student.get();
