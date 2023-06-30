@@ -17,4 +17,9 @@ public class TeacherServiceImpl implements TeacherService {
         Teacher teacher = teacherRepository.getTeacherByUsername(username);
         return teacher;
     }
+
+    @Override
+    public void createTeacher(Teacher teacher) {
+        teacherRepository.save(teacher);
+    }
 }
