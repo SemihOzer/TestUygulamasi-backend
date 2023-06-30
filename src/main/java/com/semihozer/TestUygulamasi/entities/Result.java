@@ -1,6 +1,5 @@
 package com.semihozer.TestUygulamasi.entities;
 
-import jakarta.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,25 +9,24 @@ import java.util.List;
 public class Result {
 
     @Id
-    @GeneratedValue
     private String id;
 
     private List<Integer> corrects;
     private List<Integer> fails;
     private List<Integer> misses;
-    private Student student;
+    private String username;
     private Test test;
 
     public Result() {
 
     }
 
-    public Result(String id, List<Integer> corrects, List<Integer> fails, List<Integer> misses, Student student, Test test) {
+    public Result(String id, List<Integer> corrects, List<Integer> fails, List<Integer> misses, String username, Test test) {
         this.id = id;
         this.corrects = corrects;
         this.fails = fails;
         this.misses = misses;
-        this.student = student;
+        this.username = username;
         this.test = test;
     }
 
@@ -64,12 +62,12 @@ public class Result {
         this.misses = misses;
     }
 
-    public Student getStudent() {
-        return student;
+    public String getUsername() {
+        return username;
     }
 
-    public void setStudent(Student student) {
-        this.student = student;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Test getTest() {

@@ -1,6 +1,5 @@
 package com.semihozer.TestUygulamasi.entities;
 
-import jakarta.persistence.GeneratedValue;
 import jakarta.validation.constraints.Future;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,7 +12,6 @@ import java.util.List;
 public class Test {
 
     @Id
-    @GeneratedValue
     private String id;
     private String name;
     private String description;

@@ -5,9 +5,13 @@ import com.semihozer.TestUygulamasi.entities.Test;
 import com.semihozer.TestUygulamasi.repositories.ResultRepository;
 import com.semihozer.TestUygulamasi.service.abstracts.ResultService;
 import com.semihozer.TestUygulamasi.utilites.exceptions.NotFoundException;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
+
 
 public class ResultServiceImpl implements ResultService {
 
@@ -28,11 +32,6 @@ public class ResultServiceImpl implements ResultService {
         return results;
     }
 
-    @Override
-    public List<Result> getResultsByLevel(int level) {
-        List<Result> results = resultRepository.findAllTestByLevel(level);
-        return results;
-    }
 
     @Override
     public List<Result> getResultByTest(Test test) {

@@ -1,6 +1,5 @@
 package com.semihozer.TestUygulamasi.entities;
 
-import jakarta.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,7 +9,6 @@ import java.util.List;
 public class Teacher {
 
     @Id
-    @GeneratedValue
     private String id;
     private String username;
     private String password;
