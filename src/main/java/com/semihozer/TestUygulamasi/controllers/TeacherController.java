@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/teacher")
 public class TeacherController {
 
-    TeacherService teacherService;
+    private TeacherService teacherService;
 
     public TeacherController(TeacherService teacherService) {
         this.teacherService = teacherService;

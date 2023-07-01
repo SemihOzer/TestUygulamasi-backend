@@ -5,6 +5,7 @@ import com.semihozer.TestUygulamasi.entities.Test;
 import com.semihozer.TestUygulamasi.repositories.ResultRepository;
 import com.semihozer.TestUygulamasi.service.abstracts.ResultService;
 import com.semihozer.TestUygulamasi.utilites.exceptions.NotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,12 @@ import java.util.Optional;
 
 public class ResultServiceImpl implements ResultService {
 
+    @Autowired
     private ResultRepository resultRepository;
+
+
+    public ResultServiceImpl() {
+    }
 
     public ResultServiceImpl(ResultRepository resultRepository) {
         this.resultRepository = resultRepository;

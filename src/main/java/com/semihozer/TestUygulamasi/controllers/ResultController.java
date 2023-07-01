@@ -14,7 +14,7 @@ import java.util.List;
 public class ResultController {
 
 
-    ResultService resultService;
+    private ResultService resultService;
 
     public ResultController(ResultService resultService) {
         this.resultService = resultService;

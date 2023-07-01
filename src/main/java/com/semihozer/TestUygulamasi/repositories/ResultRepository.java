@@ -3,7 +3,6 @@ package com.semihozer.TestUygulamasi.repositories;
 import com.semihozer.TestUygulamasi.entities.Result;
 import com.semihozer.TestUygulamasi.entities.Test;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

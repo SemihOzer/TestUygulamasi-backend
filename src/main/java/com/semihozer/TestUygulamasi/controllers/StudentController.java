@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class StudentController {
 
     //Services to use
-    StudentService studentService;
+    private StudentService studentService;
 
 
 

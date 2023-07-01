@@ -4,15 +4,20 @@ import com.semihozer.TestUygulamasi.entities.Student;
 import com.semihozer.TestUygulamasi.repositories.StudentRepository;
 import com.semihozer.TestUygulamasi.service.abstracts.StudentService;
 import com.semihozer.TestUygulamasi.utilites.exceptions.NotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
 public class StudentServiceImpl implements StudentService {
 
+    @Autowired
     private StudentRepository studentRepository;
 
     public StudentServiceImpl(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
+    }
+
+    public StudentServiceImpl() {
     }
 
     @Override

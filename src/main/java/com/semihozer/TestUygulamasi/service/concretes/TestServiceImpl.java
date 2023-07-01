@@ -3,16 +3,21 @@ package com.semihozer.TestUygulamasi.service.concretes;
 import com.semihozer.TestUygulamasi.entities.Test;
 import com.semihozer.TestUygulamasi.repositories.TestRepository;
 import com.semihozer.TestUygulamasi.service.abstracts.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
 public class TestServiceImpl implements TestService {
 
+    @Autowired
     private TestRepository testRepository;
 
     public TestServiceImpl(TestRepository testRepository) {
         this.testRepository = testRepository;
+    }
+
+    public TestServiceImpl() {
     }
 
     @Override
