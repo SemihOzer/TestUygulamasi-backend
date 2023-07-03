@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface TestRepository extends MongoRepository<Test,String> {
     List<Test> findAllTestByLevel(Integer level, Sort sort);
-    @Query("{ name : { $regex : ?0 } }")
+    @Query("{ name : { $regex : ?0, $options: 'i' } }")
     List<Test> getTestsByNameRegEx(String name);
 }

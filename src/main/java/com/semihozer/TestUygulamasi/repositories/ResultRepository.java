@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 
+
 public interface ResultRepository extends MongoRepository<Result,String> {
     List<Result> findAllTestByUsername(String username);
     List<Result> findAllTestByTest(Test test);
