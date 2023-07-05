@@ -10,5 +10,5 @@ import java.util.List;
 
 public interface ResultRepository extends MongoRepository<Result,String> {
     List<Result> findAllTestByUsername(String username);
-    List<Result> findAllTestByTest(Test test);
+    List<Result> findAllTestByTestId(String string);
 }

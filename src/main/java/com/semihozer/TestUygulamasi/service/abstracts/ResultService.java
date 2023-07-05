@@ -12,6 +12,6 @@ public interface ResultService {
 
     void createResult(Result result);
     List<Result> getResultsByUsername(String username);
-    List<Result> getResultByTest(Test test);
+    List<Result> getResultByTestId(String testId);
     Result getResultById(String id);
 }

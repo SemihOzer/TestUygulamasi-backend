@@ -15,19 +15,19 @@ public class Result {
     private List<Integer> fails;
     private List<Integer> misses;
     private String username;
-    private Test test;
+    private String testId;
 
     public Result() {
 
     }
 
-    public Result(String id, List<Integer> corrects, List<Integer> fails, List<Integer> misses, String username, Test test) {
+    public Result(String id, List<Integer> corrects, List<Integer> fails, List<Integer> misses, String username, String testId) {
         this.id = id;
         this.corrects = corrects;
         this.fails = fails;
         this.misses = misses;
         this.username = username;
-        this.test = test;
+        this.testId = testId;
     }
 
     public String getId() {
@@ -70,11 +70,11 @@ public class Result {
         this.username = username;
     }
 
-    public Test getTest() {
-        return test;
+    public String getTestId() {
+        return testId;
     }
 
-    public void setTest(Test test) {
-        this.test = test;
+    public void setTestId(String testId) {
+        this.testId = testId;
     }
 }

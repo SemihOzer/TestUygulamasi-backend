@@ -31,9 +31,9 @@ public class ResultController {
         return resultService.getResultsByUsername(username);
     }
 
-    @GetMapping("/getResultsByTest")
-    public List<Result> getResultsByTest(@RequestBody Test test){
-        return resultService.getResultByTest(test);
+    @GetMapping("/getResultsByTest/{testId}")
+    public List<Result> getResultsByTestId(@PathVariable String testId){
+        return resultService.getResultByTestId(testId);
     }
 
     @GetMapping("/getResultById/{id}")

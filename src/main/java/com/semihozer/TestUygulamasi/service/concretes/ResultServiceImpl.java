@@ -38,12 +38,12 @@ public class ResultServiceImpl implements ResultService {
         return results;
     }
 
-
     @Override
-    public List<Result> getResultByTest(Test test) {
-        List<Result> results = resultRepository.findAllTestByTest(test);
+    public List<Result> getResultByTestId(String testId) {
+        List<Result> results = resultRepository.findAllTestByTestId(testId);
         return results;
     }
+
 
     @Override
     public Result getResultById(String id) {
